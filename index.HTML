@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕌 تهنئة عيد الأضحى المبارك - AI Greeting Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars-container" id="starsContainer"></div>
+
+    <div class="lantern" style="top: 10%; right: 5%; animation-delay: 0s;">🏮</div>
+    <div class="lantern" style="top: 30%; left: 3%; animation-delay: 1s;">🕯️</div>
+    <div class="lantern" style="top: 60%; right: 8%; animation-delay: 2s;">🏮</div>
+    <div class="lantern" style="top: 80%; left: 6%; animation-delay: 3s;">🕯️</div>
+
+    <nav class="nav-bar" id="navBar">
+        <div class="nav-content">
+            <div class="nav-logo">🕌 عيد أضحى مبارك</div>
+            <ul class="nav-links">
+                <li><a href="#ai-section">✨ وكيل AI</a></li>
+                <li><a href="#templates">🎨 القوالب</a></li>
+                <li><a href="#gallery">🖼️ المعرض</a></li>
+                <li><a href="#features">⭐ المميزات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="crescent-container">
+            <svg class="crescent-moon" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#F5E6A3"/>
+                        <stop offset="100%" style="stop-color:#D4AF37"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" fill="url(#moonGrad)"/>
+                <circle cx="65" cy="40" r="35" fill="#1a1a2e"/>
+                <polygon points="75,25 77,31 83,31 78,35 80,41 75,37 70,41 72,35 67,31 73,31" fill="#F5E6A3"/>
+            </svg>
+        </div>
+
+        <h1 class="main-title">عيد الأضحى المبارك</h1>
+        <div class="decorative-line"></div>
+        <p class="sub-title">أنشئ تهنئة فريدة بالذكاء الاصطناعي 🐑✨</p>
+        <p style="color: rgba(255,255,255,0.5); position: relative; z-index: 2; font-size: 1rem; text-align: center; max-width: 500px;">
+            اجعل تهانيك مميزة هذا العيد مع وكيل الذكاء الاصطناعي الذي يصنع لك رسائل فريدة ومؤثرة
+        </p>
+
+        <div class="scroll-indicator" onclick="document.getElementById('ai-section').scrollIntoView({behavior: 'smooth'})">
+            <span></span>
+        </div>
+    </section>
+
+    <section class="section ai-section" id="ai-section">
+        <h2 class="section-title">🤖 وكيل الذكاء الاصطناعي</h2>
+
+        <div class="ai-container">
+            <div class="ai-card">
+                <div class="ai-badge">
+                    <div class="pulse"></div>
+                    AI مُفعّل • وكيل التهنئة الذكي
+                </div>
+
+                <div class="form-group">
+                    <label>👤 اسم المُرسَل إليه</label>
+                    <input type="text" class="form-input" id="recipientName" placeholder="مثال: أحمد، أمي الحبيبة، عائلتي...">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>🎭 نوع العلاقة</label>
+                        <select class="form-input" id="relationship">
+                            <option value="">اختر العلاقة...</option>
+                            <option value="family">👨‍👩‍👧‍👦 عائلة</option>
+                            <option value="friend">🤝 صديق/ة</option>
+                            <option value="colleague">💼 زميل عمل</option>
+                            <option value="teacher">📚 معلم/ة</option>
+                            <option value="spouse">💕 زوج/ة</option>
+                            <option value="children">👶 أطفال</option>
+                            <option value="parents">🏠 والدين</option>
+                            <option value="general">🌍 عامة</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>📝 أسلوب الرسالة</label>
+                        <select class="form-input" id="style">
+                            <option value="">اختر الأسلوب...</option>
+                            <option value="formal">🎩 رسمي وفخم</option>
+                            <option value="warm">💖 دافئ وعاطفي</option>
+                            <option value="funny">😄 مرح وطريف</option>
+                            <option value="poetic">🌹 شعري وأدبي</option>
+                            <option value="religious">🤲 ديني ودعوي</option>
+                            <option value="short">⚡ قصير ومختصر</option>
+                            <option value="modern">🎯 عصري وشبابي</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>💬 رسالة أو ملاحظة إضافية (اختياري)</label>
+                    <input type="text" class="form-input" id="customNote" placeholder="مثال: يحب السفر، اشتقت له، أول عيد بعد التخرج...">
+                </div>
+
+                <div class="form-group">
+                    <label>🏷️ مواضيع إضافية</label>
+                    <div class="tags-container" id="tagsContainer">
+                        <button class="tag" data-tag="أضحية">🐑 أضحية</button>
+                        <button class="tag" data-tag="حج">🕋 حج</button>
+                        <button class="tag" data-tag="عرفة">⛰️ عرفة</button>
+                        <button class="tag" data-tag="تكبيرات">📿 تكبيرات</button>
+                        <button class="tag" data-tag="صلة رحم">👨‍👩‍👧‍👦 صلة رحم</button>
+                        <button class="tag" data-tag="فرحة">🎉 فرحة</button>
+                        <button class="tag" data-tag="دعاء">🤲 دعاء</button>
+                        <button class="tag" data-tag="ذكريات">📸 ذكريات</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>🌐 اللغة</label>
+                    <div class="tags-container">
+                        <button class="tag lang-tag active" data-lang="ar">🇸🇦 عربي</button>
+                        <button class="tag lang-tag" data-lang="en">🇬🇧 English</button>
+                        <button class="tag lang-tag" data-lang="fr">🇫🇷 Français</button>
+                        <button class="tag lang-tag" data-lang="ur">🇵🇰 اردو</button>
+                        <button class="tag lang-tag" data-lang="tr">🇹🇷 Türkçe</button>
+                        <button class="tag lang-tag" data-lang="ms">🇲🇾 Malay</button>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateGreeting()">
+                    <span class="btn-text">✨ أنشئ التهنئة بالذكاء الاصطناعي</span>
+                    <div class="spinner"></div>
+                </button>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-label">
+                            <span>✨</span> التهنئة المُنشأة
+                        </div>
+                        <div class="result-actions">
+                            <button class="action-btn" onclick="copyGreeting()">📋 نسخ</button>
+                            <button class="action-btn" onclick="openShareModal()">📤 مشاركة</button>
+                            <button class="action-btn" onclick="regenerateGreeting()">🔄 إعادة</button>
+                        </div>
+                    </div>
+                    <div class="greeting-text" id="greetingText"></div>
+
+                    <div class="card-preview" id="cardPreview">
+                        <div class="preview-card" id="previewCard">
+                            <div class="pattern-overlay"></div>
+                            <div class="border-design"></div>
+                            <div class="corner corner-tl"></div>
+                            <div class="corner corner-tr"></div>
+                            <div class="corner corner-bl"></div>
+                            <div class="corner corner-br"></div>
+                            <div class="card-emoji">🐑🕌</div>
+                            <div class="card-title">عيد أضحى مبارك</div>
+                            <div class="card-message" id="cardMessage"></div>
+                            <div class="card-from" id="cardFrom"></div>
+                        </div>
+                    </div>
+
+                    <div class="theme-selector">
+                        <div class="theme-option t1 active" onclick="changeCardTheme(this, 'linear-gradient(135deg, #0D6B3D, #14A05E)')"></div>
+                        <div class="theme-option t2" onclick="changeCardTheme(this, 'linear-gradient(135deg, #1a1a2e, #16213e)')"></div>
+                        <div class="theme-option t3" onclick="changeCardTheme(this, 'linear-gradient(135deg, #8B4513, #D2691E)')"></div>
+                        <div class="theme-option t4" onclick="changeCardTheme(this, 'linear-gradient(135deg, #2c1810, #5c3d2e)')"></div>
+                        <div class="theme-option t5" onclick="changeCardTheme(this, 'linear-gradient(135deg, #1B4332, #2D6A4F)')"></div>
+                        <div class="theme-option t6" onclick="changeCardTheme(this, 'linear-gradient(135deg, #3d0c4f, #7b2d8e)')"></div>
+                    </div>
+
+                    <div class="download-section">
+                        <button class="download-btn primary" onclick="downloadCard()">📥 تحميل البطاقة</button>
+                        <button class="download-btn secondary" onclick="openShareModal()">📤 مشاركة فورية</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section" id="historySection" style="display: none;">
+                <div class="history-title">📜 سجل التهاني السابقة</div>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section templates-section" id="templates">
+        <h2 class="section-title">🎨 قوالب جاهزة</h2>
+        <div class="templates-grid" id="templatesGrid">
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+        <h2 class="section-title">🖼️ معرض التهاني</h2>
+        <div class="gallery-grid" id="galleryGrid">
+        </div>
+    </section>
+
+    <section class="section features-section" id="features">
+        <h2 class="section-title">⭐ مميزات الموقع</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">ذكاء اصطناعي متقدم</div>
+                <div class="feature-desc">وكيل AI يفهم السياق ويصنع تهاني فريدة ومخصصة</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">بطاقات جميلة</div>
+                <div class="feature-desc">تصاميم احترافية قابلة للتخصيص والتحميل</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">متعدد اللغات</div>
+                <div class="feature-desc">دعم 6 لغات عالمية للتهاني</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📤</div>
+                <div class="feature-title">مشاركة فورية</div>
+                <div class="feature-desc">شارك عبر واتساب وتويتر وفيسبوك وأكثر</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <div class="feature-title">أساليب متنوعة</div>
+                <div class="feature-desc">رسمي، عاطفي، مرح، شعري، ديني والمزيد</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <div class="feature-title">حفظ تلقائي</div>
+                <div class="feature-desc">جميع تهانيك محفوظة لاستخدامها لاحقاً</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="counter-section">
+        <div class="counter-grid">
+            <div class="counter-item">
+                <div class="number" id="counterGreetings">0</div>
+                <div class="label">تهنئة تم إنشاؤها</div>
+            </div>
+            <div class="counter-item">
+                <div class="number" id="counterShares">0</div>
+                <div class="label">مشاركة</div>
+            </div>
+            <div class="counter-item">
+                <div class="number">6+</div>
+                <div class="label">لغة مدعومة</div>
+            </div>
+            <div class="counter-item">
+                <div class="number">7+</div>
+                <div class="label">أسلوب مختلف</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            صُنع بكل <span class="heart">❤️</span> لأمة الإسلام • عيد أضحى مبارك 2025 🐑
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-link" onclick="shareToWhatsApp()">💬</a>
+            <a href="#" class="social-link" onclick="shareToTwitter()">🐦</a>
+            <a href="#" class="social-link" onclick="shareToFacebook()">📘</a>
+            <a href="#" class="social-link" onclick="shareToTelegram()">✈️</a>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="shareModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeShareModal()">✕</button>
+            <div class="modal-title">📤 مشاركة التهنئة</div>
+            <div class="share-options">
+                <button class="share-btn whatsapp" onclick="shareToWhatsApp()">
+                    <span class="share-icon">💬</span>
+                    واتساب
+                </button>
+                <button class="share-btn twitter" onclick="shareToTwitter()">
+                    <span class="share-icon">🐦</span>
+                    تويتر
+                </button>
+                <button class="share-btn facebook" onclick="shareToFacebook()">
+                    <span class="share-icon">📘</span>
+                    فيسبوك
+                </button>
+                <button class="share-btn telegram" onclick="shareToTelegram()">
+                    <span class="share-icon">✈️</span>
+                    تلغرام
+                </button>
+                <button class="share-btn email" onclick="shareToEmail()">
+                    <span class="share-icon">📧</span>
+                    بريد
+                </button>
+                <button class="share-btn copy" onclick="copyGreeting()">
+                    <span class="share-icon">📋</span>
+                    نسخ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <span id="toastIcon">✅</span>
+        <span id="toastText">تم النسخ بنجاح!</span>
+    </div>
+
+    <div class="sheep-parade" id="sheepParade"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
